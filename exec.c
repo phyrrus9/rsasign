@@ -6,7 +6,9 @@
 #include "md5.h"
 #include <sys/stat.h>
 
-#define syskey "sys.pub" //these will change
+extern int execl(const char *path, const char *arg0, ... /*, (char *)0 */);
+
+#define syskey "sys." //these will change
 #define sigkey "sig.pub"
 
 bool exists(char * filename)
@@ -61,4 +63,5 @@ int main(int argc, char * * argv)
         printf("Success!\n");
     rsa_decrypt_file(syskey, filename, "/tmp/code");
     chmod("/tmp/code", S_IXUSR | S_IXGRP | S_IXOTH);
+    execl("/tmp/code", "/tmp/code", "OK", NULL); //execute the code and delete the file
 }
