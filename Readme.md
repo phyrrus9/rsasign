@@ -1,13 +1,16 @@
 =RSA Code Signature program=
+----------------------------
 Copyright © 2013 Ethan Laur (phyrrus9) [@phyrrus9] <phyrrus9@gmail.com>
 
 =About=
+-------
 The RSA signature program is aimed at preventing piracy and ensuring all
 code run on your device is safe. This will be implemented in the Private
 Dev iPhone App Store for jailbroken devices. If you wish to use this
 feature, please follow the instructions section.
 
 =The Process=
+-------------
 The process of submitting apps to the store follows below:
 1. Developer writes code for the application
 2. Developer zips all code together
@@ -26,6 +29,7 @@ The process of submitting apps to the store follows below:
    for more details.
 
 =Instructions=
+--------------
 In order for the code to be secure, the developer MUST include the following
 line of code (preferably at the start of the application).
    unlink("/tmp/code");
@@ -35,9 +39,11 @@ If you wish to have a trial application, simply add
 to your code.
 
 =About the keys=
+----------------
 Both the signature key and the execution keys are different than the ones
 included in this repository, and will be hidden on the filesystem (or in
 memory somewhere) and will be inaccessable to users. No worries.
 
 =Donations=
+-----------
 You can keep them, it's free software.
